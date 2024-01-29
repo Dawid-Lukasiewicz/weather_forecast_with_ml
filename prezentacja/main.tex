@@ -1,0 +1,79 @@
+\documentclass[usepdftitle=false,24pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{carlito}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{movie15}
+
+\setbeamertemplate{bibliography item}[text]
+
+\setbeamertemplate{section in toc}{\Large{\inserttocsectionnumber.}~\inserttocsection}
+
+\setbeamertemplate{caption}[numbered]
+
+\renewcommand{\figurename}{Rys.}
+
+\usetheme[vertical, pagenumbers, hr=false, lang=pl]{NewPwr}
+
+\setbeamersize{text margin left=4mm,text margin right=4mm}
+
+\def\mytitle{Metody Sztucznej Inteligencji}
+\def\myauthor{Dawid Łukasiewicz, 252891}
+\def\addinfo{Model przewidywania pogody}
+\def\mydate{25.01.2023}
+\date{}
+
+
+\begin{document}
+
+\begin{frame}
+    \begin{titlepage}
+        \centering
+        {\huge\bfseries \mytitle\\}
+        \vspace{2cm}
+        {\Large \addinfo\\}
+        \vspace{.4cm}
+        {\Large \myauthor\\}
+        \vspace{1cm}
+        {\large Wrocław \mydate }
+        \vfill
+
+    \end{titlepage}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wstęp}
+
+    Celem modelu było przewidywanie pogody na następne 7 dni na podstawie poprzednich 30 dni.
+
+    \vspace*{1cm}
+
+    Pod uwagę brano tylko 3 cechy każdego dnia:
+    \begin{itemize}
+            \item opady deszczu,
+            \item maksymalna temperatura,
+            \item minimalna temperatura.
+        \end{itemize}
+
+    \vspace*{1cm}
+
+    Na podstawie wartości 3 cech z 30 dni, model szacował wartości tych  samych cech dla kolejnych 7 dni.
+
+\end{frame}
+
+
+% \section{Bibliografia}
+\begin{frame}[allowframebreaks]
+    \frametitle{Bibliografia}
+    % \bibliographystyle{ieeetr}
+    % \bibliography{biblio.bib}
+
+\end{frame}
+
+
+
+\end{document}
