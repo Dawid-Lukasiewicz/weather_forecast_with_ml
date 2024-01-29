@@ -143,12 +143,14 @@
             \begin{figure}
                 \includegraphics[width=\textwidth]{images/tmax.png}
                 \caption{Wykres porównania przewidywej maksymalnej temperatury do rzeczywistych}
+                \label{rys-tmax}
             \end{figure}
         \end{column}
         \begin{column}{.5\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth]{images/tmin.png}
                 \caption{Wykres porównania przewidywej minimalnej temperatury do rzeczywistych}
+                \label{rys-tmin}
             \end{figure}
         \end{column}
     \end{columns}
@@ -159,7 +161,26 @@
     \begin{figure}
         \includegraphics[width=.75\textwidth]{images/opady.png}
         \caption{Wykres porównania przewidywanych opadów do rzeczywistych}
+        \label{rys-opady}
     \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Podsumowanie}
+
+    \begin{itemize}
+        \item Jakość modelu oszacowana podczas treningu i walidacji wynosi $13.59$.
+        \item Z rysunków \ref{rys-tmax}, \ref{rys-tmin} i \ref{rys-opady} widzimy, że wartości znacznie odbiegają od oczekiwanych wartości.
+        \item Jedynie co możemy pozytywnie ocenić, to zbliżone trendy zmian wartości.
+        \item W celu poprawienia jakości modelu należy rozważyć:
+        \begin{enumerate}
+            \item pomiary powinny pochodzić z miejsc będących w  podobnej strefie klimatycznej,
+            \item uzględnić więcej danych z każdego dnia, np. średnia wartość temperatury,
+            \item zastosowanie innych metod sztucznej inteligencji, np. drzewo losowe.
+            \item rozważyć rozszerzenie sieci neuronowej o jeszcze jedną warstę głęboką.
+        \end{enumerate}
+    \end{itemize}
+
 \end{frame}
 
 \begin{frame}[allowframebreaks]
